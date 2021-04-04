@@ -48,7 +48,7 @@ import sun.rmi.runtime.NewThreadAction;
 public final class ObjectTable {
 
     /** maximum interval between complete garbage collections of local heap */
-    private final static long gcInterval =              // default 1 hour
+    private static final long gcInterval =              // default 1 hour
         AccessController.doPrivileged((PrivilegedAction<Long>) () ->
             Long.getLong("sun.rmi.dgc.server.gcInterval", 3600000));
 
